@@ -42,7 +42,7 @@ updated deliberately and explained in your pull request. See `tests/README.md`.
 ### Manual: template or script changes
 
 Run these on a **small synthetic or redistributable sample** in your own
-Obsidian vault (section 15 of the main README has the full checklist).
+Obsidian vault (the [reproducibility checklist](docs/guide.md#13-reproducibility-checklist) in the guide has the full list).
 
 | # | Check | Expected result |
 |---|---|---|

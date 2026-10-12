@@ -60,4 +60,4 @@ tests the script's own parsing, filtering, categorising and de-duplication.
   tables.
 - The test checks the script's logic, not how Dataview renders the result
   inside Obsidian. Check that part visually using the reproducibility
-  checklist in section 15 of the main README.
+  checklist in the [guide](../docs/guide.md#13-reproducibility-checklist).
