@@ -21,6 +21,8 @@ The second line continues the same highlight.
 
 ### Findings
 
+**[Figure and Table (2026), p. 5](zotero://open-pdf/library/items/ATTACH04?page=5&annotation=ANNOT008)** — ![[synthetic-figure.png]]
+
 **[Sample and Test (2024), p. 12](zotero://open-pdf/library/items/ATTACH02?page=12&annotation=ANNOT006)** — Synthetic passage six reports a result in lower-case tag form.
 
 ### Contribution

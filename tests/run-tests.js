@@ -107,6 +107,13 @@ function firstDifference(actual, expected) {
   check("callout without a Zotero page link is skipped",
         !actual.includes("researcher-written"));
 
+  // Documents current behaviour for annotations that have no highlighted text.
+  check("image annotation is kept, but only as its embed text (not verified in Obsidian)",
+        actual.includes("ANNOT008") && actual.includes("![[synthetic-figure.png]]"));
+
+  check("annotation with a comment but no text or image is omitted",
+        !actual.includes("ANNOT009") && !actual.includes("comment-only"));
+
   const empty = await render({ collection: "Coursework/NoSuchCollection" });
   check("unknown collection shows empty-state messages only",
         !empty.includes("zotero:") && (empty.match(/No annotations tagged/g) || []).length === 7);

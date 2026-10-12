@@ -57,6 +57,7 @@ Build a durable, personal academic knowledge base that supports multiple researc
 | Shared project aggregation | **Tested** | `research-evidence.js` collects annotations from source notes matching collection metadata. |
 | Duplicate prevention | **Tested** | Multi-tagged annotation appears only once within each project category. |
 | Unclassified annotations | **Tested** | Hillman and Moses examples appeared in Unclassified after the script update. |
+| Image-only annotations (figures, tables) | **Untested** | Behaviour is inferred from the script and template, not confirmed in a live vault; see the limitations in section 8. |
 | Deleting Obsidian source note | **Tested** | Corresponding evidence disappeared from the project view without manual deletion there. |
 | Import a particular Zotero collection | **Documented** | Zotero collection right-click → ZotLit → Create or Update Literature Notes. |
 | Dynamic topic-specific evidence | **Experimental** | Separate script drafted; not established as successful in the user's vault. |
@@ -272,7 +273,8 @@ Reuse the **same script** and change only the `collection` string. Do not copy h
 
 - The script reads cached `collections` YAML; **it does not query live Zotero collection membership**.
 - It relies on the documented/tested annotation-callout formatting. A change to the Liquid templates may require a parser update.
-- Some non-text or image-only annotations may not be represented as intended; test before relying on them.
+- **Image and table annotations are not validated.** The annotation template emits an image embed (`zt.imgLink | embed`) before the highlighted text. The script treats whatever follows the page link as the excerpt, so an image-only annotation is probably listed with its raw embed text, which may not display as a picture in the dashboard. This has **not been tested against a live ZotLit export**; tables and figures that you capture as image annotations should be checked before you rely on them.
+- **Comment-only annotations are omitted.** An annotation with a comment but neither highlighted text nor an image produces an empty excerpt, and the script skips it. Put the comment on a highlight, or review such comments in the source note.
 - It is designed for this template's output, not arbitrary Markdown or other Zotero-to-Obsidian plugins.
 
 **Testing template changes:** run `node tests/run-tests.js` (Node.js 18 or later) after editing the Liquid templates or the script. It checks the parser against synthetic sample notes with known expected output; see `tests/README.md`.

@@ -34,12 +34,14 @@ tests the script's own parsing, filtering, categorising and de-duplication.
 | Researcher comments are kept out of the evidence text | `**My comment:**` lines |
 | Callouts without a Zotero page link are skipped | `> [!warning] ...` |
 | Highlights spanning several lines are kept together | `ANNOT002` |
+| Image annotation: kept as its embed text (`![[...]]`), `ANNOT008` | Documents current behaviour; the embed format is assumed |
+| Comment-only annotation (no text, no image) is omitted, `ANNOT009` | Documents current behaviour |
 | Notes from other collections are excluded | `Other et al 2023.md` |
 | Missing or unknown collection settings fail gracefully | empty-state messages |
 
 ## Files
 
-- `fixtures/vault/01 Sources/` — three **synthetic** source notes. All text is
+- `fixtures/vault/01 Sources/` — four **synthetic** source notes. All text is
   invented; none comes from a real paper or from a real Zotero library.
 - `expected-output.md` — the exact output the script should produce for the
   collection `Coursework/COURSE101/Example Project/Literature`.
@@ -51,6 +53,10 @@ tests the script's own parsing, filtering, categorising and de-duplication.
   main README. They are not captured from a live ZotLit export. If you change
   the templates, regenerate one real note, copy its annotation blocks into the
   fixtures and update `expected-output.md` by hand.
+- **Image annotations are not validated.** The image fixture uses an assumed
+  embed line (`![[synthetic-figure.png]]`). Capture a real image annotation from
+  your own ZotLit export and replace the fixture before relying on figures or
+  tables.
 - The test checks the script's logic, not how Dataview renders the result
   inside Obsidian. Check that part visually using the reproducibility
   checklist in section 15 of the main README.
