@@ -6,6 +6,8 @@
 >
 > **Scope:** This repository demonstrates the workflow. It must not contain an actual researcher's private vault, purchased PDFs, confidential notes, or unpublished research unless publication rights and privacy have been checked.
 
+**Tested with:** ZotLit 2.1.4. Other versions of ZotLit, Obsidian, Dataview and Zotero may behave differently; see the version caution in section 3.
+
 ## 1. Purpose and design philosophy
 
 Build a durable, personal academic knowledge base that supports multiple research projects. Its purpose is not simply to store PDF highlights: it should help researchers identify research gaps, compare evidence, develop concepts, and formulate arguments with traceable sources.
