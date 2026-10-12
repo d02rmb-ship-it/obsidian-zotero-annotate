@@ -6,7 +6,7 @@
 >
 > **Scope:** This repository demonstrates the workflow. It must not contain an actual researcher's private vault, purchased PDFs, confidential notes, or unpublished research unless publication rights and privacy have been checked.
 
-**Tested with:** ZotLit 2.1.4, Dataview 0.5.68 and Zotero 10.0.6 (64-bit, Windows). Other versions of ZotLit, Obsidian, Dataview and Zotero may behave differently; see the version caution in section 3.
+**Tested with:** Obsidian 1.14.4, ZotLit 2.1.4, Dataview 0.5.68 and Zotero 10.0.6 (64-bit, Windows). Other versions of ZotLit, Obsidian, Dataview and Zotero may behave differently; see the version caution in section 3.
 
 ## 1. Purpose and design philosophy
 
