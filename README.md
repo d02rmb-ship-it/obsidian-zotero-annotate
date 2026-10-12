@@ -4,7 +4,7 @@
 
 > **Status legend:** **Tested** means confirmed in the original research vault; **Documented** means supported by official documentation but not necessarily tested across every installation; **Experimental** means a possible extension, not part of the validated core workflow.
 >
-> **Scope:** This repository demonstrates the workflow. It must not contain an actual researcher's private vault, purchased PDFs, confidential notes, or unpublished research unless publication rights and privacy have been checked.
+> **Scope:** This repository demonstrates the workflow. It holds templates, documentation, scripts and anonymized examples only. It must not contain an actual researcher's private vault, purchased PDFs, confidential notes, or unpublished research unless publication rights and privacy have been checked. `.gitignore` cannot recognise private Markdown notes, so review every file before committing; see [CONTRIBUTING.md](CONTRIBUTING.md).
 
 **Tested with:** Obsidian 1.14.4, ZotLit 2.1.4, Dataview 0.5.68 and Zotero 10.0.6 (64-bit, Windows). Other versions of ZotLit, Obsidian, Dataview and Zotero may behave differently; see the version caution in section 3.
 
@@ -443,6 +443,8 @@ GitHub's [repository quickstart](https://docs.github.com/en/repositories/creatin
 ```text
 zotero-zotlit-obsidian-research-workflow/
 ├── README.md
+├── CONTRIBUTING.md
+├── LICENSE
 ├── .gitignore
 ├── templates/
 │   ├── zotlit-note.liquid.md

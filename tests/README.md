@@ -36,6 +36,7 @@ tests the script's own parsing, filtering, categorising and de-duplication.
 | Highlights spanning several lines are kept together | `ANNOT002` |
 | Image annotation: kept as its embed text (`![[...]]`), `ANNOT008` | Documents current behaviour; the embed format is assumed |
 | Comment-only annotation (no text, no image) is omitted, `ANNOT009` | Documents current behaviour |
+| PDF links are portable: templates use `attachment.backlink`, no `fileLink` or `file://` | templates and fixtures |
 | Notes from other collections are excluded | `Other et al 2023.md` |
 | Missing or unknown collection settings fail gracefully | empty-state messages |
 

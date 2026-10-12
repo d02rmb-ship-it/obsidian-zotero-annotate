@@ -1,4 +1,5 @@
 # This repository is documentation and sample code, not a live vault.
+# This file cannot detect private Markdown notes: review every file before committing (see CONTRIBUTING.md).
 .obsidian/workspace.json
 .obsidian/workspace-mobile.json
 .obsidian/plugins/*/data.json

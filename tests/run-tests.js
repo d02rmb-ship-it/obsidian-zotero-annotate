@@ -114,6 +114,18 @@ function firstDifference(actual, expected) {
   check("annotation with a comment but no text or image is omitted",
         !actual.includes("ANNOT009") && !actual.includes("comment-only"));
 
+  // Portable links: PDF links must use zotero:// backlinks, never machine-specific paths.
+  const templateDir = path.join(root, "templates");
+  const templateText = fs.readdirSync(templateDir)
+    .map(file => fs.readFileSync(path.join(templateDir, file), "utf8")).join("\n");
+  check("templates use Zotero backlinks, not machine-specific file links",
+        /attachment\.backlink/.test(templateText) && !/\.fileLink|file:\/\//.test(templateText));
+
+  const fixtureText = listMarkdown(vault)
+    .map(file => fs.readFileSync(file, "utf8")).join("\n");
+  check("sample notes contain no machine-specific file:// links",
+        !/file:\/\//.test(fixtureText));
+
   const empty = await render({ collection: "Coursework/NoSuchCollection" });
   check("unknown collection shows empty-state messages only",
         !empty.includes("zotero:") && (empty.match(/No annotations tagged/g) || []).length === 7);
