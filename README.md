@@ -275,6 +275,8 @@ Reuse the **same script** and change only the `collection` string. Do not copy h
 - Some non-text or image-only annotations may not be represented as intended; test before relying on them.
 - It is designed for this template's output, not arbitrary Markdown or other Zotero-to-Obsidian plugins.
 
+**Testing template changes:** run `node tests/run-tests.js` (Node.js 18 or later) after editing the Liquid templates or the script. It checks the parser against synthetic sample notes with known expected output; see `tests/README.md`.
+
 ## 9. Source removal: what happens and what does not
 
 **Tested:** Delete a note from Obsidian `01 Sources`; the project dashboard automatically ceases showing its annotations, because the dashboard is computed from the existing source notes. The Zotero original is not deleted.
@@ -447,9 +449,14 @@ zotero-zotlit-obsidian-research-workflow/
 ├── scripts/
 │   ├── research-evidence.js
 │   └── topic-evidence-EXPERIMENTAL.js
-└── examples/
-    ├── project-note.md
-    └── topic-note.md
+├── examples/
+│   ├── project-note.md
+│   └── topic-note.md
+└── tests/
+    ├── README.md
+    ├── run-tests.js
+    ├── expected-output.md
+    └── fixtures/vault/01 Sources/   # synthetic sample source notes
 ```
 
 The main `README.md` is the installation and handover guide. The `templates/`, `scripts/` and `examples/` files are intended for use by readers after adapting paths and settings.
