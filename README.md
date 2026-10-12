@@ -20,7 +20,7 @@ Turn Zotero highlights into traceable, project-level evidence dashboards in Obsi
 
 ## Quick start
 
-The shortest path from a tagged Zotero highlight to a project evidence dashboard. Section numbers refer to the full guide below.
+The shortest path from a tagged Zotero highlight to a project evidence dashboard. Each "guide §" link goes to the matching section of the [implementation guide](docs/guide.md).
 
 1. **Install the tools** ([guide §2](docs/guide.md#2-requirements-and-installation)): Zotero with the ZotLit Companion, and Obsidian with the ZotLit and Dataview plugins. In Dataview settings, enable JavaScript queries.
 2. **Create two vault folders** ([guide §3](docs/guide.md#3-recommended-vault-structure)): `01 Sources` for imported notes and `00 Dashboard/Scripts` for the script.
