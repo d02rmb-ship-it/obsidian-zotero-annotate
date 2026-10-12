@@ -93,8 +93,8 @@ Example Zotero hierarchy:
 ```text
 My Library
 └── Coursework
-    └── B9923
-        └── Board Expertise & CSDS
+    └── COURSE101
+        └── Example Project
             └── Literature
 ```
 
@@ -187,7 +187,7 @@ A generated note resembles:
 ---
 title: Example paper title
 collections:
-  - Coursework/B9923/Board Expertise & CSDS/Literature
+  - Coursework/COURSE101/Example Project/Literature
 citekey: exampleCitationKey2025
 citation: Example et al. (2025)
 zotero-key: ABCD1234
@@ -204,7 +204,7 @@ Set `collections` frontmatter merge behaviour to **Replace** where supported and
 
 **Official, collection-scoped method:**
 
-1. In **Zotero**, locate the desired subcollection, e.g. `Coursework → B9923 → Board Expertise & CSDS → Literature`.
+1. In **Zotero**, locate the desired subcollection, e.g. `Coursework → COURSE101 → Example Project → Literature`.
 2. Right-click that **collection**, not `My Library`.
 3. Choose **ZotLit → Create or Update Literature Notes**.
 4. In Obsidian, review the batch confirmation showing new and existing notes.
@@ -219,13 +219,13 @@ Copy `scripts/research-evidence.js` into:
 
 `Research Vault/00 Dashboard/Scripts/research-evidence.js`
 
-In `04 Projects/Board Expertise and ESG Readiness.md`, use:
+In `04 Projects/Example Project.md`, use:
 
 ````markdown
 ## Research Evidence
 ```dataviewjs
 await dv.view("00 Dashboard/Scripts/research-evidence", {
-  collection: "Coursework/B9923/Board Expertise & CSDS/Literature"
+  collection: "Coursework/COURSE101/Example Project/Literature"
 });
 ```
 ````
@@ -297,7 +297,7 @@ Keep provisional mechanisms and research interpretations in separate notes, e.g.
 
 ```markdown
 **Related theory:** [[Resource Dependence Theory]]
-**Project:** [[Board Expertise and ESG Readiness]]
+**Project:** [[Example Project]]
 ```
 
 In a Resource Dependence Theory note, the **Backlinks** pane can show which argument notes refer to it automatically—no reverse link is necessary. Topic notes should outlive individual projects; arguments should remain explicitly provisional until assessed.

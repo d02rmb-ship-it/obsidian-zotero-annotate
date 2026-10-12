@@ -1,13 +1,13 @@
 ## Research Focus
-Board expertise and sustainability disclosure readiness.
+One or two sentences describing the project.
 ## Research Questions
-- How does board expertise relate to disclosure readiness?
+- What is the central research question?
 ## Theoretical Perspectives
 - [[Resource Dependence Theory]]
 - [[Agency Theory]]
 ## Research Evidence
 ```dataviewjs
 await dv.view("00 Dashboard/Scripts/research-evidence", {
-  collection: "Coursework/B9923/Board Expertise & CSDS/Literature"
+  collection: "Coursework/COURSE101/Example Project/Literature"
 });
 ```
