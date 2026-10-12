@@ -14,12 +14,12 @@ The shortest path from a tagged Zotero highlight to a project evidence dashboard
 
 1. **Install the tools** (section 3): Zotero with the ZotLit Companion, and Obsidian with the ZotLit and Dataview plugins. In Dataview settings, enable JavaScript queries.
 2. **Create two vault folders** (section 4): `01 Sources` for imported notes and `00 Dashboard/Scripts` for the script.
-3. **Install the templates** (section 6): In Obsidian, open Settings → ZotLit → Templates. Configure the template folder and install the three files from `templates/` using their exact filenames, placed directly inside that folder (not in nested subfolders):
-   - `zotlit-note.liquid.md` — Literature note
-   - `zotlit-annotation.liquid.md` — Annotation
-   - `zotlit-content.liquid.md` — Managed region
+3. **Install the ZotLit templates** (section 6): In Obsidian, open Settings → ZotLit → Templates and set the Template folder (for example, `06 Templates/ZotLit`). Place the following files in that folder:
+   - `zotlit-note.liquid.md` — Literature note template
+   - `zotlit-annotation.liquid.md` — Individual annotation template
+   - `zotlit-content.liquid.md` — Managed content template
 
-   ZotLit identifies templates by these filenames. The `{% render "content" %}` and `{% render "annotation" %}` statements reference the corresponding templates by name. Set the literature note destination to `01 Sources`.
+   ZotLit recognizes templates following the `zotlit-<name>.liquid.md` naming convention. Verify that the Literature note, Annotation, and Content entries reference the expected files. Set the literature note destination to `01 Sources`.
 4. **Add the script** (section 8): copy `scripts/research-evidence.js` into `00 Dashboard/Scripts`.
 5. **Tag highlights in Zotero** (section 5): use the seven category tags (Background, Literature Review, Theory, Gap, Method, Findings, Contribution). Untagged highlights appear under Unclassified.
 6. **Import a collection** (section 7): in Zotero, right-click the collection → ZotLit → Create or Update Literature Notes.
