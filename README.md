@@ -8,6 +8,25 @@
 
 **Tested with:** Obsidian 1.14.4, ZotLit 2.1.4, Dataview 0.5.68 and Zotero 10.0.6 (64-bit, Windows). Other versions of ZotLit, Obsidian, Dataview and Zotero may behave differently; see the version caution in section 3.
 
+## Quick start
+
+The shortest path from a tagged Zotero highlight to a project evidence dashboard. Section numbers refer to the full guide below.
+
+1. **Install the tools** (section 3): Zotero with the ZotLit Companion, and Obsidian with the ZotLit and Dataview plugins. In Dataview settings, enable JavaScript queries.
+2. **Create two vault folders** (section 4): `01 Sources` for imported notes and `00 Dashboard/Scripts` for the script.
+3. **Install the templates** (section 6): In Obsidian, open Settings → ZotLit → Templates. Configure the template folder and install the three files from `templates/` using their exact filenames, placed directly inside that folder (not in nested subfolders):
+   - `zotlit-note.liquid.md` — Literature note
+   - `zotlit-annotation.liquid.md` — Annotation
+   - `zotlit-content.liquid.md` — Managed region
+
+   ZotLit identifies templates by these filenames. The `{% render "content" %}` and `{% render "annotation" %}` statements reference the corresponding templates by name. Set the literature note destination to `01 Sources`.
+4. **Add the script** (section 8): copy `scripts/research-evidence.js` into `00 Dashboard/Scripts`.
+5. **Tag highlights in Zotero** (section 5): use the seven category tags (Background, Literature Review, Theory, Gap, Method, Findings, Contribution). Untagged highlights appear under Unclassified.
+6. **Import a collection** (section 7): in Zotero, right-click the collection → ZotLit → Create or Update Literature Notes.
+7. **Add the dashboard to a project note** (section 8): paste the `dataviewjs` block from `examples/project-note.md`, set `collection` to your Zotero collection path, and view the note in Reading View.
+
+Before relying on it, run the reproducibility checklist in section 15 on a small sample.
+
 ## 1. Purpose and design philosophy
 
 Build a durable, personal academic knowledge base that supports multiple research projects. Its purpose is not simply to store PDF highlights: it should help researchers identify research gaps, compare evidence, develop concepts, and formulate arguments with traceable sources.
