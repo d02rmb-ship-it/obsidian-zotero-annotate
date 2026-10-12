@@ -1,0 +1,12 @@
+# This repository is documentation and sample code, not a live vault.
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/plugins/*/data.json
+.DS_Store
+Thumbs.db
+*.sqlite
+*.sqlite-*
+*.pdf
+*.env
+secrets.*
+private/
